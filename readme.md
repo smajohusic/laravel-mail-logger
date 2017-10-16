@@ -7,9 +7,6 @@ This package listens to the MessageSending event fired from Mailer. The listener
 
 This package also supports auto deleting. You can define how long the the app should keep the logs by defining days in the config file.
 
-### Requirements
-Queue driver. Because every database action is queued as a job.
-
 ### Installation
 
 1. ```composer require smajo/laravel-mail-logger```
