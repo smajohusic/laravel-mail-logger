@@ -1,0 +1,18 @@
+{
+    "name": "Smajo/laravel-mail-logger",
+    "description": "Listens to Mail send event, and saves the information to database as backup/log",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Smajo Husic",
+            "email": "smajohusic@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Smajo\\MailLogger\\": "src/"
+        }
+    },
+    "require": {}
+}
