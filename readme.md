@@ -3,7 +3,7 @@
 ### Introduction
 Mail logger has one purpose, save mail before they are sent from your app. This enables you to have backup of mail and a overview if something goes wrong.
 
-This package listens to the MessageSending event fired from Mailer. The listener will then save the needed form information, event, route and recipient to the database.
+This package listens to the MessageSending event fired from Mailer. The listener will dispatch a job, then save the needed form information, event, route and recipient to the database.
 
 This package also supports auto deleting. You can define how long the the app should keep the logs by defining days in the config file.
 
@@ -14,11 +14,27 @@ This package also supports auto deleting. You can define how long the the app sh
 3. Execute command: ```php artisan vendor:publish --provider="Smajo\MailLogger\MailLogServiceProvider"```
 4. Run: ```php artisan migrate``` to generate the mail-logger table
 
+### Requirements
+***Cron job***
+
+To enable auto-deleting you will need to set up a cron job that runs 
+
+```php artisan schedule::run```
+
 ### Usage
 
 ##### mailLogger.php config
 
-Define your field input names that's used in form for user E-mail:
+By default the auto-deleting is disabled. To enable it set
+
+```'enableAutoDeletion' => true,```
+
+You can set how long the logs should be stored in the database by giving amount in days.
+
+```'keepLogsForDays' => 30,``` 
+
+To make it easier to find mails, you can define all "to" fields your app uses in forms. This will then find the 
+user e-mail in the request, and save it as the "sender" field.
 
 ```php
 'toEmailAddresses' => [
