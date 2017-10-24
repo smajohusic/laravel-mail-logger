@@ -16,5 +16,12 @@
     },
     "require": {
         "php": ">=7.0.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Smajo\\MailLogger\\MailLogServiceProvider"
+            ]
+        }
     }
 }

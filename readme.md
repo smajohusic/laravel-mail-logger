@@ -9,10 +9,16 @@ This package also supports auto deleting. You can define how long the the app sh
 
 ### Installation
 
-1. ```composer require smajo/laravel-mail-logger```
-2. Add ```Smajo\MailLogger\MailLogServiceProvider::class``` to providers in app.php
-3. Execute command: ```php artisan vendor:publish --provider="Smajo\MailLogger\MailLogServiceProvider"```
-4. Run: ```php artisan migrate``` to generate the mail-logger table
+#### Laravel 5.5 +
+1. ``composer require smajo/laravel-mail-logger``
+
+2. Package is automatically discovered and registered via Laravel's automatic service provider registration.
+
+#### Laravel 5.4 or earlier
+1. ``composer require smajo/laravel-mail-logger``
+2. Add ``Smajo\MailLogger\MailLogServiceProvider::class`` to providers in app.php
+3. Execute command: ``php artisan vendor:publish --provider="Smajo\MailLogger\MailLogServiceProvider"``
+4. Run: ``php artisan migrate`` to generate the mail-logger table
 
 ### Requirements
 ***Cron job***
@@ -40,6 +46,6 @@ user e-mail in the request, and save it as the "sender" field.
 'toEmailAddresses' => [
     'email',
     'e-mail',
-    'to'
+    'to',
 ]
 ``` 
