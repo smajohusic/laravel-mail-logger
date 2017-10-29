@@ -1,5 +1,5 @@
 {
-    "name": "smajo/laravel-mail-logger",
+    "name": "smajohusic/laravel-mail-logger",
     "description": "Listens to Mail send event, and saves the information to database as backup/log",
     "type": "package",
     "license": "MIT",
