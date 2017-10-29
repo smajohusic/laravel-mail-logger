@@ -14,8 +14,21 @@
             "Smajo\\MailLogger\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Smajo\\MailLogger\\Test\\": "tests/"
+        }
+    },
     "require": {
         "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.5",
+        "phpunit/phpunit": "^6.4",
+        "mockery/mockery": "^1.0"
+    },
+    "scripts": {
+        "test": "smajohusic/bin/phpunit"
     },
     "extra": {
         "laravel": {
