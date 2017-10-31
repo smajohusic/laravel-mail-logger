@@ -25,7 +25,7 @@ This package also supports auto deleting. You can define how long the the app sh
 
 To enable auto-deleting you will need to set up a cron job that runs 
 
-```php artisan schedule::run```
+```php artisan schedule:run```
 
 ### Usage
 
