@@ -15,7 +15,7 @@ class CreateMailLogsTable extends Migration
     {
         Schema::create('mail_logs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('sender')->nullable()->default(null);
+            $table->string('sent_to')->nullable()->default(null);
             $table->text('data');
             $table->text('route');
             $table->text('event');

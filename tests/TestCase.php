@@ -3,10 +3,10 @@
 namespace Smajo\MailLogger\Test;
 
 use Illuminate\Database\Schema\Blueprint;
-use Mockery;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Smajo\MailLogger\MailLogServiceProvider;
 use Smajo\MailLogger\Models\MailLog;
+use Mockery;
 
 abstract class TestCase extends OrchestraTestCase
 {
@@ -38,13 +38,13 @@ abstract class TestCase extends OrchestraTestCase
 
         $app['config']->set('app.key', '6rE9Nz59bGRbeMATftriyQjrpF7DcOQm');
 
-        $app['config']->set('laravelEntitySyncEndpoint.entities', [
-            'article' => Article::class,
-            'page' => Page::class,
+        $app['config']->set('mailLogger.enableAutoDeletion', true);
+        $app['config']->set('mailLogger.keepLogsForDays', 10);
+        $app['config']->set('mailLogger.toEmailAddresses', [
+            'to',
+            'email',
+            'mail_to'
         ]);
-
-        $app['config']->set('laravelEntitySyncEndpoint.routeUrlPrefix', '');
-        $app['config']->set('laravelEntitySyncEndpoint.api_auth_token', null);
     }
 
     protected function setUpDatabase()
@@ -75,7 +75,7 @@ abstract class TestCase extends OrchestraTestCase
                     $table->increments('id');
 
                     if ($tableName === 'mail_logs') {
-                        $table->string('sender')->nullable()->default(null);
+                        $table->string('sent_to')->nullable()->default(null);
                         $table->text('data');
                         $table->text('route');
                         $table->text('event');
@@ -91,10 +91,10 @@ abstract class TestCase extends OrchestraTestCase
         collect($modelClasses)->each(function ($modelClass) {
             foreach (range(1, 0) as $index) {
                 $modelClass::create([
-                    'sender' => 'smajohusic@gmail.com',
-                    'data' => '',
+                    'sent_to' => 'smajohusic@gmail.com',
+                    'data' => '{\"mail\":\"smajohusic@gmail.com\",\"message\":\"This is a test message\"}',
                     'route' => 'http://mail-logger.app/send-mail',
-                    'event' => '',
+                    'event' => 'Message-ID: <b2f74d9e1a23f6f3631651116f50c7b5@mail-logger.app>',
                 ]);
             }
         });
@@ -105,8 +105,8 @@ abstract class TestCase extends OrchestraTestCase
         $this->assertTrue(true);
     }
 
-//    private function registerMocks()
-//    {
-//        Mockery::mock('App\Http\Controllers\Controller');
-//    }
+    private function registerMocks()
+    {
+        Mockery::mock('Smajo\MailLogger\Models\MailLog');
+    }
 }

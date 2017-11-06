@@ -1,0 +1,14 @@
+
+
+Code Coverage Report:    
+  2017-11-03 15:03:39    
+                         
+ Summary:                
+  Classes: 25.00% (1/4)  
+  Methods: 36.36% (4/11) 
+  Lines:   33.96% (18/53)
+
+\Smajo\MailLogger::MailLogServiceProvider
+  Methods:  75.00% ( 3/ 4)   Lines:  90.00% (  9/ 10)
+\Smajo\MailLogger\Commands::DeleteLogs
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  7/  7)
