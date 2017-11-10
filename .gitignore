@@ -1,1 +1,5 @@
-vendor
+/build
+/vendor
+.env
+.idea
+composer.lock
