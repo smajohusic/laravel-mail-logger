@@ -37,10 +37,10 @@ class StoreMailEventToDatabase implements ShouldQueue
          * Save the request and event data to the database
          */
         $mailLog->create([
-            'sender' => $this->getCustomerEmail($this->formRequest),
+            'sent_to' => $this->getCustomerEmail($this->formRequest),
             'data' => json_encode(json_encode($this->formRequest)),
-            'route' => request()->route()->getName(),
-            'event' => $this->event->message->toString()
+            'route' => request()->fullUrl(),
+            'event' => $this->event->message,
         ]);
     }
 
@@ -50,8 +50,6 @@ class StoreMailEventToDatabase implements ShouldQueue
             if (key_exists($field, $request)) {
                 return $request[$field];
             }
-
-            return null;
         }
     }
 }

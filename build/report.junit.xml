@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Test Suite" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="0.556166">
+    <testsuite name="Smajo\MailLogger\Test\BaseTest" file="/Users/smajohusic/Privat/laravel-mail-logger/tests/BaseTest.php" tests="3" assertions="4" errors="0" failures="0" skipped="0" time="0.556166">
+      <testcase name="testCreateMailLogEntry" class="Smajo\MailLogger\Test\BaseTest" classname="Smajo.MailLogger.Test.BaseTest" file="/Users/smajohusic/Privat/laravel-mail-logger/tests/BaseTest.php" line="11" assertions="1" time="0.240142"/>
+      <testcase name="testDeleteMailLogEntry" class="Smajo\MailLogger\Test\BaseTest" classname="Smajo.MailLogger.Test.BaseTest" file="/Users/smajohusic/Privat/laravel-mail-logger/tests/BaseTest.php" line="22" assertions="2" time="0.172170"/>
+      <testcase name="testDeletingMailLogEntryWhenDeletingIsDisabled" class="Smajo\MailLogger\Test\BaseTest" classname="Smajo.MailLogger.Test.BaseTest" file="/Users/smajohusic/Privat/laravel-mail-logger/tests/BaseTest.php" line="39" assertions="1" time="0.143854"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
