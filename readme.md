@@ -1,5 +1,10 @@
 # Laravel Mail Logger
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ventrec/laravel-entity-sync-endpoint.svg?style=flat-square)](https://packagist.org/packages/ventrec/laravel-entity-sync-endpoint)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/ventrec/laravel-entity-sync-endpoint/master.svg?style=flat-square)](https://travis-ci.org/ventrec/laravel-entity-sync-endpoint)
+[![Total Downloads](https://img.shields.io/packagist/dt/ventrec/laravel-entity-sync-endpoint.svg?style=flat-square)](https://packagist.org/packages/ventrec/laravel-entity-sync-endpoint)
+
 ### Introduction
 Mail logger has one purpose, save mail before they are sent from your app. This enables you to have backup of mail and a overview if something goes wrong.
 
