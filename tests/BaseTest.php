@@ -3,49 +3,45 @@
 namespace Smajo\MailLogger\Test;
 
 use Smajo\MailLogger\Commands\DeleteLogs;
+use Smajo\MailLogger\Jobs\StoreMailEventToDatabase;
 use Smajo\MailLogger\Models\MailLog;
-use Mockery;
 
 class BaseTest extends TestCase
 {
-    public function testCreate()
+    public function testCreateMailLogEntry()
     {
-//        $event = new EventFake(new Dispatcher(), ['Illuminate\Mail\Events\MessageSending']);
-//        $test = $event->fire('Illuminate\Mail\Events\MessageSending');
-//        $event->hasDispatched('Illuminate\Mail\Events\MessageSending')
-
         $model = app(MailLog::class);
-        $data = json_decode(file_get_contents(__DIR__ . '/data/store.json'), true);
+        $request = json_decode(file_get_contents(__DIR__ . '/data/request.json'), true);
+        $event = json_decode(json_encode(['message' => file_get_contents(__DIR__ . '/data/event.txt')]));
 
-        $model->create($data);
+        (new StoreMailEventToDatabase($event, $request))->handle(new MailLog());
 
         $this->assertEquals($model->get()->count(), 3);
     }
 
-    public function testDelete()
+    public function testDeleteMailLogEntry()
     {
-        // Mock MailLogs model and run DeleteLogs. Se then if $mock->shouldHaveRecieved->deleted() is fired
-        $mock = Mockery::mock(new DeleteLogs());
+        $thiryDaysBefore = date("Y-n-j", strtotime("-1 month")) . ' 00:00:00';
+        $data = json_decode(file_get_contents(__DIR__ . '/data/store.json'), true);
+        $data['created_at'] = $thiryDaysBefore;
+        $data['updated_at'] = $thiryDaysBefore;
 
-        $mock->handle();
+        $model = app(MailLog::class);
+        $model->create($data);
 
-        $mock->shouldHaveReceived()->handle();
+        $this->assertEquals($model->count(), 3);
 
-        dd('');
+        app(DeleteLogs::class)->handle();
 
+        $this->assertEquals($model->count(), 2);
+    }
 
-//        $thiryDaysBefore = date("Y-n-j", strtotime("-1 month")) . ' 00:00:00';
-//        $data = json_decode(file_get_contents(__DIR__ . '/data/store.json'), true);
-//        $data['created_at'] = $thiryDaysBefore;
-//        $data['updated_at'] = $thiryDaysBefore;
+    public function testDeletingMailLogEntryWhenDeletingIsDisabled()
+    {
+        $this->app['config']->set('mailLogger.enableAutoDeletion', false);
 
-//        $model = app(MailLog::class);
-//        $model->create($data);
+        app(DeleteLogs::class)->handle();
 
-//        $this->assertEquals($model->count(), 3);
-
-//        app(DeleteLogs::class)->handle();
-
-//        $this->assertEquals($model->count(), 2);
+        $this->assertEquals(app(MailLog::class)->count(), 2);
     }
 }

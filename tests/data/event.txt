@@ -1,0 +1,118 @@
+Message-ID: <3ba2bc2d0cafed48e4c716e1ba56f075@mail-logger.app>
+Date: Fri, 03 Nov 2017 11:28:24 +0000
+Subject: smajo@test.test
+From: "smajo@test.test" <smajo@test.test>
+To: smajohusic@hotmail.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"en">
+    <head>
+        <meta charset=
+=3D"utf-8">
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D=
+edge">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, i=
+nitial-scale=3D1">
+
+        <title>Laravel</title>
+
+        <!-- Fo=
+nts -->
+        <link href=3D"https://fonts.googleapis.com/css?family=3DR=
+aleway:100,600" rel=3D"stylesheet" type=3D"text/css">
+
+        <!-- Sty=
+les -->
+        <style>
+            html, body {
+                back=
+ground-color: #fff;
+                color: #636b6f;
+                fon=
+t-family: 'Raleway', sans-serif;
+                font-weight: 100;
+    =
+            height: 100vh;
+                margin: 0;
+            }
+=
+
+            .full-height {
+                height: 100vh;
+          =
+  }
+
+            .flex-center {
+                align-items: center;=
+
+                display: flex;
+                justify-content: center=
+;
+            }
+
+            .position-ref {
+                positi=
+on: relative;
+            }
+
+            .top-right {
+             =
+   position: absolute;
+                right: 10px;
+                top=
+: 18px;
+            }
+
+            .content {
+                text-=
+align: center;
+            }
+
+            .title {
+                =
+font-size: 84px;
+            }
+
+            .links > a {
+          =
+      color: #636b6f;
+                padding: 0 25px;
+                =
+font-size: 12px;
+                font-weight: 600;
+                lett=
+er-spacing: .1rem;
+                text-decoration: none;
+             =
+   text-transform: uppercase;
+            }
+
+            .m-b-md {
+=
+                margin-bottom: 30px;
+            }
+        </style>
+ =
+   </head>
+    <body>
+        <div class=3D"flex-center position-ref fu=
+ll-height">
+            <p>Send mail, lol.</p>
+            <form method=
+=3D"POST" action=3D"http://mail-logger.app:8000" accept-charset=3D"UTF-8"><=
+input name=3D"_token" type=3D"hidden" value=3D"GqkwXJzLGENpOABR8CQWVoYt86Ha=
+NY2uYUeIIsie">
+                <input placeholder=3D"mail adr." name=3D"m=
+ail" type=3D"text" value=3D"smajo@sempro.no">
+                <input plac=
+eholder=3D"melding" name=3D"message" type=3D"text" value=3D"test">
+      =
+          <input type=3D"submit" value=3D"send">
+            </form>
+  =
+      </div>
+    </body>
+</html>

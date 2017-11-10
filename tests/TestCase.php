@@ -6,7 +6,6 @@ use Illuminate\Database\Schema\Blueprint;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Smajo\MailLogger\MailLogServiceProvider;
 use Smajo\MailLogger\Models\MailLog;
-use Mockery;
 
 abstract class TestCase extends OrchestraTestCase
 {
@@ -15,7 +14,6 @@ abstract class TestCase extends OrchestraTestCase
         parent::setUp();
 
         $this->setUpDatabase();
-//        $this->registerMocks();
     }
 
     protected function getPackageProviders($app)
@@ -103,10 +101,5 @@ abstract class TestCase extends OrchestraTestCase
     public function doNotMarkAsRisky()
     {
         $this->assertTrue(true);
-    }
-
-    private function registerMocks()
-    {
-        Mockery::mock('Smajo\MailLogger\Models\MailLog');
     }
 }

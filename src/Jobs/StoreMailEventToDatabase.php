@@ -39,8 +39,8 @@ class StoreMailEventToDatabase implements ShouldQueue
         $mailLog->create([
             'sent_to' => $this->getCustomerEmail($this->formRequest),
             'data' => json_encode(json_encode($this->formRequest)),
-            'route' => request()->route()->getName(),
-            'event' => $this->event->message->toString()
+            'route' => request()->fullUrl(),
+            'event' => $this->event->message,
         ]);
     }
 

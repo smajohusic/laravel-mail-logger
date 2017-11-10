@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1510320527">
-  <project timestamp="1510320527">
+<coverage generated="1510321172">
+  <project timestamp="1510321172">
     <package name="Smajo\MailLogger\Commands">
       <file name="/Users/smajohusic/Privat/laravel-mail-logger/src/Commands/DeleteLogs.php">
         <class name="DeleteLogs" namespace="Smajo\MailLogger\Commands">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
         </class>
-        <line num="30" type="method" name="handle" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="32" type="stmt" count="1"/>
-        <line num="33" type="stmt" count="1"/>
-        <line num="34" type="stmt" count="1"/>
-        <line num="35" type="stmt" count="1"/>
-        <line num="36" type="stmt" count="1"/>
-        <line num="37" type="stmt" count="1"/>
-        <line num="38" type="stmt" count="1"/>
+        <line num="30" type="method" name="handle" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
         <metrics loc="39" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
       </file>
     </package>
@@ -56,22 +56,22 @@
         <class name="MailLogServiceProvider" namespace="Smajo\MailLogger">
           <metrics complexity="5" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="9" elements="14" coveredelements="12"/>
         </class>
-        <line num="13" type="method" name="boot" visibility="public" complexity="2" crap="2" count="2"/>
-        <line num="18" type="stmt" count="2"/>
-        <line num="23" type="stmt" count="2"/>
-        <line num="28" type="method" name="anonymousFunction:28#131" complexity="1" crap="1.12" count="2"/>
+        <line num="13" type="method" name="boot" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="28" type="method" name="anonymousFunction:28#131" complexity="1" crap="1.12" count="3"/>
         <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="2"/>
-        <line num="32" type="stmt" count="2"/>
-        <line num="33" type="method" name="anonymousFunction:33#184" complexity="1" crap="1" count="2"/>
-        <line num="34" type="stmt" count="2"/>
-        <line num="35" type="stmt" count="2"/>
-        <line num="36" type="stmt" count="2"/>
-        <line num="38" type="stmt" count="2"/>
-        <line num="40" type="method" name="register" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="45" type="stmt" count="2"/>
-        <line num="46" type="stmt" count="2"/>
-        <line num="48" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="method" name="anonymousFunction:33#184" complexity="1" crap="1" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="40" type="method" name="register" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <line num="46" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
         <metrics loc="49" ncloc="37" classes="1" methods="4" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="11" elements="16" coveredelements="14"/>
       </file>
     </package>
