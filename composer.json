@@ -28,7 +28,7 @@
         "mockery/mockery": "^1.0"
     },
     "scripts": {
-        "test": "smajohusic/bin/phpunit"
+        "test": "vendor/bin/phpunit"
     },
     "extra": {
         "laravel": {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1509721419">
-  <project timestamp="1509721419">
+<coverage generated="1510320527">
+  <project timestamp="1510320527">
     <package name="Smajo\MailLogger\Commands">
       <file name="/Users/smajohusic/Privat/laravel-mail-logger/src/Commands/DeleteLogs.php">
         <class name="DeleteLogs" namespace="Smajo\MailLogger\Commands">
@@ -28,34 +28,27 @@
     <package name="Smajo\MailLogger\Jobs">
       <file name="/Users/smajohusic/Privat/laravel-mail-logger/src/Jobs/StoreMailEventToDatabase.php">
         <class name="StoreMailEventToDatabase" namespace="Smajo\MailLogger\Jobs">
-          <metrics complexity="6" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="0" elements="25" coveredelements="0"/>
+          <metrics complexity="6" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="18" coveredelements="14"/>
         </class>
-        <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="27" type="method" name="handle" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="32" type="stmt" count="0"/>
+        <line num="21" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="27" type="method" name="handle" visibility="public" complexity="2" crap="2.01" count="1"/>
+        <line num="32" type="stmt" count="1"/>
         <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="40" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
-        <line num="45" type="stmt" count="0"/>
-        <line num="47" type="method" name="getCustomerEmail" visibility="private" complexity="3" crap="12" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <line num="49" type="stmt" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="53" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="method" name="getCustomerEmail" visibility="private" complexity="3" crap="3.14" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
         <line num="54" type="stmt" count="0"/>
-        <metrics loc="55" ncloc="49" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="0" elements="25" coveredelements="0"/>
+        <metrics loc="55" ncloc="49" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="18" coveredelements="14"/>
       </file>
     </package>
     <package name="Smajo\MailLogger">
@@ -111,6 +104,6 @@
       <line num="34" type="stmt" count="0"/>
       <metrics loc="35" ncloc="25" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="15" coveredelements="0"/>
     </file>
-    <metrics files="6" loc="197" ncloc="154" classes="4" methods="11" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="18" elements="64" coveredelements="22"/>
+    <metrics files="6" loc="197" ncloc="154" classes="4" methods="11" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="46" coveredstatements="31" elements="57" coveredelements="36"/>
   </project>
 </coverage>
